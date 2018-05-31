@@ -7,9 +7,6 @@ setup(
     py_modules = ['todo_catalog'],
     install_requires = [
         'Click',
-        'os',
-        'sys',
-        're'
     ],
     entry_points = '''
         [console_scripts]

@@ -7,9 +7,9 @@ import re
 @click.command()
 @click.option('--dir', default=False, help='root directory')
 @click.option('--file_ext', default=False, help='File extensions to scan')
-@click.option('--files_to_ignore', default=False, help='Files to ignore while scanning for TODO comments.')
-@click.option('--dirs_to_ignore', default=False, help='Directories to ignore while scanning for TODO comments.')
-def find_todos(dir, file_ext, files_to_ignore, dirs_to_ignore=False):
+@click.option('--files_to_ignore', default=[], help='Files to ignore while scanning for TODO comments.')
+@click.option('--dirs_to_ignore', default=[], help='Directories to ignore while scanning for TODO comments.')
+def find_todos(dir, file_ext, files_to_ignore, dirs_to_ignore):
     """
     A command line function for walking the directory of a project, scanning the code files, finding TODO statements, and building a catalogue of them. A directory can be passed as the first command line argument to initiate the process somewhere other than the current working directory.  It will create or overwrite a TODO.md document in the root folder.
     ARGS:
